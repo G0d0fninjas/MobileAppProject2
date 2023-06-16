@@ -3,10 +3,10 @@ import { View, TouchableOpacity, Text, StyleSheet, SafeAreaView, ScrollView, Ima
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import ViewEmployee from './ViewEmployee';
+import EditEmployee from './EditEmployee';
 import AddEmployee from './AddEmployee';
-import DeleteEmployee from './DeleteEmployee';
 
-const EditEmployee = ({ navigation }) => {
+const DeleteEmployee = ({ navigation }) => {
   const [boxCount, setBoxCount] = useState(4);
   const [activeItems, setActiveItems] = useState(Array(boxCount).fill(false));
   const [menuOpened, setMenuOpened] = useState(false);
@@ -78,7 +78,7 @@ const EditEmployee = ({ navigation }) => {
 
       {menuOpened &&
       <View style={styles.overlay}>
-        <TouchableOpacity style={styles.editButton} onPress={() => navigation.navigate('EditEmployee')}>
+        <TouchableOpacity onPress={() => navigation.navigate('EditEmployee')}>
           <Text style={styles.buttonText}>Edit Employee</Text>
         </TouchableOpacity>
       </View>}

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { View, TouchableOpacity, Text, StyleSheet, SafeAreaView, ScrollView, Image } from 'react-native';
+import { View, TouchableOpacity, Text, StyleSheet, SafeAreaView, ScrollView, Image, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import ViewEmployee from './ViewEmployee';
+import EditEmployee from './EditEmployee';
 import AddEmployee from './AddEmployee';
 import DeleteEmployee from './DeleteEmployee';
 
-const EditEmployee = ({ navigation }) => {
+const ViewEmployee = ({ navigation }) => {
   const [boxCount, setBoxCount] = useState(4);
   const [activeItems, setActiveItems] = useState(Array(boxCount).fill(false));
   const [menuOpened, setMenuOpened] = useState(false);
@@ -78,9 +78,21 @@ const EditEmployee = ({ navigation }) => {
 
       {menuOpened &&
       <View style={styles.overlay}>
-        <TouchableOpacity style={styles.editButton} onPress={() => navigation.navigate('EditEmployee')}>
-          <Text style={styles.buttonText}>Edit Employee</Text>
-        </TouchableOpacity>
+        <View style={styles.navigationButtons}>
+          <TouchableOpacity style={styles.navButton} onPress={() => {}}>
+            <text>View Employee</text>
+          </TouchableOpacity>
+          <View style={styles.buttonSpacing} />
+          <TouchableOpacity title="Button 2" onPress={() => {}}>
+            <text>Add Employee</text>
+          </TouchableOpacity>
+          <TouchableOpacity title="Button 3" onPress={() => {}}>
+            <text>Edit Employee</text>
+          </TouchableOpacity>
+          <TouchableOpacity title="Button 4" onPress={() => {}}>
+            <text>Delete Employee</text>
+          </TouchableOpacity>
+        </View>
       </View>}
     </SafeAreaView>
   );
@@ -173,11 +185,21 @@ const styles = StyleSheet.create({
   },
   overlay: {
     position: 'absolute',
-    top: 0,
+    top: 60,
     left: 0,
     right: 0,
     bottom: 0,
+    paddingTop: 50,
     backgroundColor: '#941a1d',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+  },
+  navigationButtons: {
+    alignItems: 'center',
+  },
+  navButton: {
+    color: 'white',
+    fontSize: 20,
   },
 });
 

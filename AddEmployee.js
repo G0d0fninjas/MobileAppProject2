@@ -3,10 +3,10 @@ import { View, TouchableOpacity, Text, StyleSheet, SafeAreaView, ScrollView, Ima
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import ViewEmployee from './ViewEmployee';
-import AddEmployee from './AddEmployee';
+import EditEmployee from './EditEmployee';
 import DeleteEmployee from './DeleteEmployee';
 
-const EditEmployee = ({ navigation }) => {
+const AddEmployee = ({ navigation }) => {
   const [boxCount, setBoxCount] = useState(4);
   const [activeItems, setActiveItems] = useState(Array(boxCount).fill(false));
   const [menuOpened, setMenuOpened] = useState(false);
