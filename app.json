@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "tafe-project",
-    "slug": "tafe-project",
+    "name": "biased-kiwi",
+    "slug": "snack-a0bb61e1-5a25-4d45-8112-bf72abbc9bc0",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -10,6 +10,9 @@
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
       "**/*"
@@ -20,17 +23,11 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "package": "com.g0d0fninjas.tafeproject"
+        "backgroundColor": "#FFFFFF"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "66a8fd1b-8aad-40d3-a2f5-f2e514803eb4"
-      }
     }
   }
 }
